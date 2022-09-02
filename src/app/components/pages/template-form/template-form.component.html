@@ -1,0 +1,20 @@
+<app-page-header title="Template Form" description="simple demo of a template form"></app-page-header>
+
+<pre>
+  {{ model | json }}
+</pre>
+<form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+  <div class="form-group">
+    <label for="">Name</label>
+    <input [(ngModel)]="model.name" type="text" class="form-control" name="name" placeholder="Enter name" required  >
+  </div>
+  <div class="form-group">
+    <label for="">Email</label>
+    <input [(ngModel)]="model.email" type="email" class="form-control" name="email" placeholder="Enter email" required>
+  </div>
+  <div class="form-group">
+    <label for="">Message</label>
+    <textarea class="form-control" [(ngModel)]="model.message" name="message" rows="3" required></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="!contactForm.valid">Submit</button>
+</form>

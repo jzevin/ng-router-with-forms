@@ -1,0 +1,5 @@
+<nav>
+  <ul>
+    <li *ngFor="let link of links$ | async" [routerLink]="link.path" routerLinkActive="active">{{ link.title }}</li>
+  </ul>
+</nav>

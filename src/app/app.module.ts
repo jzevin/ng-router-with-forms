@@ -8,7 +8,7 @@ import { TemplateFormComponent } from './components/pages/template-form/template
 import { ReactiveFormComponent } from './components/pages/reactive-form/reactive-form.component';
 import { PageHeaderComponent } from './components/shared/page-header/page-header.component';
 import { GlobalNavComponent } from './components/shared/global-nav/global-nav.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

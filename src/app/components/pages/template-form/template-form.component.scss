@@ -10,7 +10,14 @@
   margin-bottom: 1em;
   display: flex;
   label {
-    flex: 0 0 4em;
+    flex: 0 0 auto;
+    min-width: 4em;
     margin-right: 1em;
   }
+}
+
+input:not([type="submit"]), textarea {
+  flex: 1;
+  border: 1px solid #ccc;
+  padding: 0.5em;
 }

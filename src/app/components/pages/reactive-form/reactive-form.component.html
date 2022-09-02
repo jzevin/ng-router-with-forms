@@ -1,1 +1,28 @@
 <app-page-header title="Reactive Form" description="simple demo of a reactive form"></app-page-header>
+
+<pre>
+  {{ profileForm.value | json }}
+</pre>
+<form id="userProfile" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="firstName">First Name</label>
+    <input type="text" class="form-control" id="firstName" placeholder="First Name" formControlName="firstName">
+  </div>
+  <div class="form-group">
+    <label for="lastName">Last Name</label>
+    <input type="text" class="form-control" id="lastName" placeholder="Last Name"  formControlName="lastName">
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" id="email" placeholder="Email"  formControlName="email">
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" id="password" placeholder="Password" formControlName="password">
+  </div>
+  <div class="form-group">
+    <label for="confirmPassword">Confirm Password</label>
+    <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password"  formControlName="confirmPassword">
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="!profileForm.valid">Submit</button>
+</form>

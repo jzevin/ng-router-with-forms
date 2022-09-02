@@ -1,0 +1,23 @@
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-touched.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
+
+.form-group {
+  margin-bottom: 1em;
+  display: flex;
+  label {
+    flex: 0 0 auto;
+    min-width: 9em;
+    margin-right: 1em;
+  }
+}
+
+input:not([type="submit"]) {
+  flex: 1;
+  border: 1px solid #ccc;
+  padding: 0.5em;
+}
